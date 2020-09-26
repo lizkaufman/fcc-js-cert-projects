@@ -1,23 +1,5 @@
 const convertToRoman = require('./index');
 
-const { TestResult } = require('@jest/types');
-
-//   convertToRoman(2),✅
-//   convertToRoman(3),✅
-//   convertToRoman(4),
-//   convertToRoman(5),
-//   convertToRoman(44),
-//   convertToRoman(68),
-//   convertToRoman(400),
-//   convertToRoman(500),
-//   convertToRoman(501),
-//   convertToRoman(1000),
-//   convertToRoman(1004),
-//   convertToRoman(1006),
-//   convertToRoman(1023),
-//   convertToRoman(2014),
-//   convertToRoman(3999),
-
 describe('Converting one-digit numbers to Roman numerals', () => {
   test(`convertToRoman(2) should return 'II'`, () => {
     const expected = 'II';
@@ -50,6 +32,17 @@ describe('Converting one-digit numbers to Roman numerals', () => {
     expect(actual).toBe(expected);
   });
 });
-// describe('Converting two-digit numbers to Roman numerals', () => {});
+describe('Converting two-digit numbers to Roman numerals', () => {
+  test(`convertToRoman(10) should return 'X'`, () => {
+    const expected = 'X';
+    const actual = convertToRoman(10);
+    expect(actual).toBe(expected);
+  });
+  test(`convertToRoman(23) should return 'XXIII'`, () => {
+    const expected = 'XXIII';
+    const actual = convertToRoman(23);
+    expect(actual).toBe(expected);
+  });
+});
 // describe('Converting three-digit numbers to Roman numerals', () => {});
 // describe('Converting four-digit numbers to Roman numerals', () => {});
