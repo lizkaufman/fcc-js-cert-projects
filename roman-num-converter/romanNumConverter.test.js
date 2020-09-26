@@ -3,7 +3,7 @@ const convertToRoman = require('./index');
 const { TestResult } = require('@jest/types');
 
 // const testCases = [
-//   convertToRoman(2),
+//   convertToRoman(2), ✅
 //   convertToRoman(3),
 //   convertToRoman(4),
 //   convertToRoman(5),
@@ -24,6 +24,11 @@ describe('Converting two-digit numbers to Roman numerals', () => {
   test(`convertToRoman(2) should return 'II'`, () => {
     const expected = 'II';
     const actual = convertToRoman(2);
+    expect(actual).toBe(expected);
+  });
+  test(`convertToRoman(3) should return 'III'`, () => {
+    const expected = 'III';
+    const actual = convertToRoman(3);
     expect(actual).toBe(expected);
   });
 });
