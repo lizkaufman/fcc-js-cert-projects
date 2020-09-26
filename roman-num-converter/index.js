@@ -7,15 +7,7 @@ function convertToRoman(num) {
   //1, 5, 10, 50, 100, 500, 1000
   let result = [];
   //---Breaking the number down:---
-  //TODO: Can move this below to its own function to abstract away!
-  let remaining = num;
-  let thousands = Math.floor(remaining / 1000);
-  remaining = remaining % 1000;
-  let hundreds = Math.floor(remaining / 100);
-  remaining = remaining % 100;
-  let tens = Math.floor(remaining / 10);
-  let ones = remaining % 10;
-  console.log({ thousands, hundreds, tens, ones });
+  let { thousands, hundreds, tens, ones } = separateNumberParts(num);
   //---thousands---:
   //---hundreds---:
   //---tens---:
@@ -83,6 +75,17 @@ function convertToRoman(num) {
     ones -= 1;
   }
   return result.join('');
+}
+
+function separateNumberParts(num) {
+  let remaining = num;
+  let thousands = Math.floor(remaining / 1000);
+  remaining = remaining % 1000;
+  let hundreds = Math.floor(remaining / 100);
+  remaining = remaining % 100;
+  let tens = Math.floor(remaining / 10);
+  let ones = remaining % 10;
+  return { thousands, hundreds, tens, ones };
 }
 
 module.exports = convertToRoman;

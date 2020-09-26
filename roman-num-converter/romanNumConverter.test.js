@@ -48,7 +48,7 @@ describe('Converting two-digit numbers to Roman numerals', () => {
     const actual = convertToRoman(45);
     expect(actual).toBe(expected); //✅
   });
-  test.only(`convertToRoman(68) should return 'LXVIII'`, () => {
+  test(`convertToRoman(68) should return 'LXVIII'`, () => {
     const expected = 'LXVIII';
     const actual = convertToRoman(68);
     expect(actual).toBe(expected);
