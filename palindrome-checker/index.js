@@ -1,3 +1,5 @@
+//Return true if the given string is a palindrome. Otherwise, return false.
+
 function palindrome(str) {
   const validChars = str.toLowerCase().match(/[a-z0-9]/gi);
   if (!validChars) {
@@ -7,11 +9,11 @@ function palindrome(str) {
   return validChars.join('') === reversedChars.join('');
 }
 
-const tests = [
+const testCases = [
   palindrome('eye'),
   palindrome('BoB'),
   palindrome('cat'),
   palindrome('^_^'),
   palindrome('hi there'),
 ];
-console.log(tests);
+console.log(testCases);

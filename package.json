@@ -1,0 +1,22 @@
+{
+  "name": "fcc-projects",
+  "version": "1.0.0",
+  "description": "This repo contains my work so far towards the FreeCodeCamp JavaScript Algorithms and Data Structures certification. You can view my progress below or on my FCC profile [here](https://www.freecodecamp.org/liz_kaufman).",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lizkaufman/fcc-js-cert-projects.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lizkaufman/fcc-js-cert-projects/issues"
+  },
+  "homepage": "https://github.com/lizkaufman/fcc-js-cert-projects#readme",
+  "devDependencies": {
+    "jest": "^26.4.2"
+  }
+}
